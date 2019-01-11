@@ -1,0 +1,90 @@
+*{font-family: 'Noto Serif KR', sans-serif; word-break: keep-all; white-space: nowrap;}
+body{margin: 0; overflow: hidden; perspective: 500px; background-color: #000;}
+
+#top{width: 100vw; font-size: 32px; line-height: 1; position: fixed; height: 32px; overflow: hidden; font-weight: 600; transition: 1s; text-align: center; right:32px; z-index: 5; background-color: #000;}
+
+#left{height: 100vh; font-size: 32px; width: 32px; writing-mode:tb-rl; font-weight: 600; top:32px; position: fixed; left: 0px; z-index: 5; background-color: #000;}
+
+#bottom{width: 100vw; font-size: 32px; line-height: 1; position: fixed; height: 32px; overflow: hidden; font-weight: 600; transition: 1s; text-align: center; left: 32px; z-index: 7; background-color: #000; color: #fff; bottom: -100vh;}
+
+#right{height: 100vh; font-size: 32px; width: 32px; writing-mode:tb-rl; font-weight: 600; top:0px; position: fixed; right: 0px; z-index: 5; background-color: #000;}
+
+#bounce {width: 100vw; height: 100vh; font-size: 150px; position: fixed; z-index: 1;
+}
+
+#youtube {width: 100vw; height: 100vh;position: fixed; z-index: 0; opacity:0.8}
+iframe{width: 120vw; height: 120vh; margin-left: -10vw; margin-top: -10vh;}
+.letter-2{z-index: 7;}
+#letter{width: calc(100vw - 64px); height: calc(100vh - 32px); position: fixed;  top:32px; background-color: #fff; z-index: 4; opacity: 0.8; padding-left:34px;
+  padding-right: 38px; font-size: 24px; white-space: normal; overflow-y: scroll;}
+#letter a:hover{cursor: pointer;}
+marquee a:hover{cursor: pointer;}
+
+.spin {
+
+  display: block;
+  width: 250px;
+  height: 250px;
+
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: 2s;
+  text-shadow: 0 0 50px #fff, 0 0 35px #fff;
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */
+   /* transform: rotate(.03turn);  */
+}
+.spin:hover{  animation-duration: 200ms;  transition: 2s;}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes tada2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.8;   }
+}
+
+@keyframes bang2 {
+    from {
+      opacity: 0.8;
+    }
+    to {
+      opacity: 0;
+      z-index: 4  }
+}
+
+.invisible{display: none}
+.tada {
+  animation-name: tada2;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  transition: 2s;
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */
+   /* transform: rotate(.03turn);  */
+}
+
+.bang {
+  animation-name: bang2;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  transition: 2s;
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */
+   /* transform: rotate(.03turn);  */
+}
